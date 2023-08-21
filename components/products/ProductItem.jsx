@@ -7,18 +7,18 @@ import CartContext from "@/context/CartContext";
 import ReactStars from "react-rating-star-with-type";
 
 const ProductItem = ({ product }) => {
-  // const { addItemToCart } = useContext(CartContext);
+  const { addItemToCart } = useContext(CartContext);
 
-  // const addToCartHandler = () => {
-  //   addItemToCart({
-  //     product: product?._id,
-  //     name: product?.name,
-  //     price: product?.price,
-  //     image: product?.images[0]?.url,
-  //     stock: product?.stock,
-  //     seller: product?.seller,
-  //   });
-  // };
+  const addToCartHandler = () => {
+    addItemToCart({
+      product: product?._id,
+      name: product?.name,
+      price: product?.price,
+      image: product?.images[0]?.url,
+      stock: product?.stock,
+      seller: product?.seller,
+    });
+  };
 
   return (
     <article className="border border-gray-200 overflow-hidden bg-white shadow-sm rounded mb-5">
@@ -90,7 +90,7 @@ const ProductItem = ({ product }) => {
             <div className="my-3">
               <a
                 className="px-4 py-2 inline-block text-white bg-black border border-transparent rounded-md hover:bg-customGold cursor-pointer"
-                // onClick={addToCartHandler}
+                onClick={addToCartHandler}
               >
                 {" "}
                 Add to Cart{" "}
