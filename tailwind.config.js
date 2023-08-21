@@ -12,12 +12,21 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
-    colors: {
+         fontFamily: {
+        bodyFont: ["DM Sans", "sans-serif"],
+        titleFont: ["Poppins", "sans-serif"],
+      },
+      colors: {
         primeColor: "#262626",
         lightText: "#6D6D6D",
         customGold: "#ddb148",
         color1:"#F5F5F3",
       },
+      boxShadow: {
+        testShadow: "0px 0px 54px -13px rgba(0,0,0,0.7)",
+        test2Shadow:"  rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;"
+      },
+
     },
   },
   plugins: [],
